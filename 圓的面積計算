@@ -1,0 +1,14 @@
+import math
+def main():
+    try:
+        r = float(input("請輸入半徑:"))
+    except ValueError:
+        print("⚠ 錯誤：請輸入數字")
+        return 
+
+    area = math.pi * (r**2)
+    print(f"面積=：{area:.2f}")
+    
+
+if __name__ == "__main__":
+    main()
