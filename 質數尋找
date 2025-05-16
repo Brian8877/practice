@@ -1,0 +1,17 @@
+p =[]
+N = int(input("請輸入正整數:"))
+
+for i in range(2,N+1):
+
+    isprime=True
+    for s in range(2,int(i**0.5)+1):
+     if i%s==0:
+      isprime=False
+      break
+     
+    if isprime:
+        p.append(i)
+   
+print(f"1到{N}的所有質數", p)
+print("質數總數為:",len(p))
+print("質數總和為",sum(p))
