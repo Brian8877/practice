@@ -1,10 +1,10 @@
-start=int(input("請輸入起始數字:"))
-finish=int(input("請輸入結束數字:"))
+h=int(input("請輸入起始數字:"))
+t=int(input("請輸入結束數字:"))
 primes=[]
-if start>finish:
+if h>t:
   print("結束數字請大於起始數字")
 else:
-  for i in range(max(start,2),finish+1):
+  for i in range(max(h,2),t+1):
     is_prime=True
     for s in range(2,int(i**0.5)+1):
         if i%s==0:
@@ -12,14 +12,14 @@ else:
             break
     if is_prime:
        primes.append(i)
-  print("範圍內的質數為:")
-  for idx,prime in enumerate(primes):
+  if primes:
+    print("範圍內的質數為:")
+    for idx,prime in enumerate(primes):
      print(prime,end='\t')
      if(idx+1)%5==0:
         print()
-  print(f"\n總共{len(primes)}個質數:")
-  print("質數總合為:",sum(primes))
-  if primes:
+    print(f"\n總共{len(primes)}個質數:")
+    print("質數總合為:",sum(primes))
     print("平均值為:",sum(primes)/len(primes))
   else:
-     print("此範圍沒有質數。")
+    print("此範圍沒有質數。")
